@@ -27,6 +27,6 @@ jobs:
           echo "EXIT_FLAG='critical'" >> env.list 
           docker run --env-file env.list -v "$(pwd):/app/src" lacework/codesec-iac:latest
         env:
-          LW_ACCOUNT: ${{ env.LW_ACCOUNT }}
+          LW_ACCOUNT: lwintseemea.fra.lacework.net
           LW_API_KEY: ${{ secrets.LW_API_KEY }}
           LW_API_SECRET: ${{ secrets.LW_API_SECRET }}
